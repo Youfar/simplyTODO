@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 class TodoListsController < ApplicationController
 
   def index
+    flash[:notice] = "ようこそ。本日は#{Date.today}です。現在は#{Time.now.strftime("%H:%M")}です。"
   	@todo_lists = TodoList.all
   end
 

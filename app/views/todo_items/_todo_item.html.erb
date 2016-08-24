@@ -1,12 +1,18 @@
-<p>
-  <strong>Todo_item:</strong>
-  <%= todo_item.content %>
-</p>
- 
-<p>
-  <strong>Difficulty:</strong>
-  <%= todo_item.difficulty %>
-</p>
+<table class="pretty">
+  <tr>
+    <th>Todo item</th>
+    <th>Difficulty</th>
+  </tr>
+  <% @todo_list.todo_items.each do |todo_item| %>
+  <tr>
+  	<td><%= todo_item.content %><td>
+  	<td><%= todo_item.difficulty %><td>
+    <td><%= link_to 'Completed', [todo_item.todo_list, todo_item],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %><td>
+  <tr>
+  <% end %>	
+</table>
 
 <p>
   <%= link_to 'Completed', [todo_item.todo_list, todo_item],
