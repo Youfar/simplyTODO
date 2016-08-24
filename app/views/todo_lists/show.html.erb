@@ -1,0 +1,13 @@
+<p>
+  <strong>Title:</strong>
+  <%= @todo_list.title %>
+</p>
+
+<h2>Todo items</h2>
+<%= render @todo_list.todo_items %>
+
+<h2>Add todo items:</h2>
+<%= render "todo_items/form" %>
+
+<%= link_to 'Back', todo_lists_path %>
+| <%= link_to 'Edit', edit_todo_list_path(@todo_list) %>

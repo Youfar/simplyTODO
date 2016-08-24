@@ -1,0 +1,15 @@
+<p>
+  <strong>Todo_item:</strong>
+  <%= todo_item.content %>
+</p>
+ 
+<p>
+  <strong>Difficulty:</strong>
+  <%= todo_item.difficulty %>
+</p>
+
+<p>
+  <%= link_to 'Completed', [todo_item.todo_list, todo_item],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

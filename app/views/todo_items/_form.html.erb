@@ -1,0 +1,13 @@
+<%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.label :difficulty %><br>
+    <%= f.select :difficulty, {'easy' => 1, 'normal' => 2, 'hard' => 3} %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
