@@ -8,6 +8,10 @@
     <%= f.select :difficulty, {'easy' => 1, 'normal' => 2, 'hard' => 3} %>
   </p>
   <p>
+    <%= f.label :deadline %><br>
+    <%= f.text_field :deadline %>
+  </p>
+  <p>
     <%= f.submit %>
   </p>
 <% end %>

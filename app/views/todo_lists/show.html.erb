@@ -8,11 +8,13 @@
   <tr>
     <th>Todo item</th>
     <th>Difficulty</th>
+    <th>Deadline</th>
   </tr>
   <% @todo_list.todo_items.each do |todo_item| %>
   <tr>
   	<td><%= todo_item.content %><td>
   	<td><%= todo_item.difficulty %><td>
+    <td><%= todo_item.deadline %><td>
     <td><%= link_to 'Completed', [todo_item.todo_list, todo_item],
                method: :delete,
                data: { confirm: 'Are you sure?' } %><td>
