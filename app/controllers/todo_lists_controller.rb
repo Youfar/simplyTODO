@@ -6,6 +6,10 @@ class TodoListsController < ApplicationController
   	@todo_lists = TodoList.all
   end
 
+  def new
+    @todo_list = TodoList.new
+  end
+
   def create
     @todo_list = TodoList.new(todo_list_params)
  
