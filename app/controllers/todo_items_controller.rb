@@ -6,6 +6,10 @@ class TodoItemsController < ApplicationController
     redirect_to todo_list_path(@todo_list)
   end
 
+  def new
+    @todo_item = @todo_list.todo_items.new
+  end
+
   def destroy
     @todo_list = TodoList.find(params[:todo_list_id])
     @todo_item = @todo_list.todo_items.find(params[:id])

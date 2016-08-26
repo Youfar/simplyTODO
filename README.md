@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##プログラムの概要
 
-Things you may want to cover:
+##使用言語、フレームワーク
 
-* Ruby and rails version
-Ruby 2.3.0 Rails 5.0.0.1
-* System dependencies
+Ruby 2.3.0 
+Rails 5.0.0.1
+Mac OS X 10.10.9
 
-* Configuration
+##画面のキャプチャ
 
-* Database creation
+##起動方法
 
-* Database initialization
+##操作方法
 
-* How to run the test suite
+##ソースコードの解説
 
-* Services (job queues, cache servers, search engines, etc.)
+##必要なライブラリ、ランタイム、環境
 
-* Deployment instructions
+##コンパイル、ビルド方法
 
-* ...
+##課題や展望
+
+##自己評価、感想
+
+##参考文献、URL
