@@ -23,5 +23,6 @@ Mac OS X 10.10.9
 ##課題や展望
 
 ##自己評価、感想
-
+web開発の面白さを感じました。これから、このアプリを始め、他のアプリをどんどん開発します。
 ##参考文献、URL
+bootstrap:http://www.w3schools.com/bootstrap/default.asp

@@ -1,49 +1,32 @@
 <%= form_for ([@todo_list, @todo_list.todo_items.build]), :html => { :class => "form-horizontal todo_list" } do |f| %>
 
-  <% if @todo_list.errors.any? %>
-    <div id="error_expl" class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-        <% @todo_list.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
-
   <div class="form-group">
-    <%= f.label :content, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :content, :class => 'form-control' %>
+    <%= f.label :content, :class => 'control-label col-lg-3' %>
+    <div class="col-lg-6">
+      <%= f.text_field :content, :class => 'form-control', :placeholder => 'add todo item'%>
     </div>
     <%=f.error_span(:content) %>
   </div>
 
   <div class="form-group">
-    <%= f.label :difficulty, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <%= f.label :difficulty, :class => 'control-label col-lg-3' %>
+    <div class="col-lg-6">
       <%= f.select :difficulty, {'easy' => 1, 'normal' => 2, 'hard' => 3}, :class => 'form-control' %>
     </div>
     <%=f.error_span(:difficulty) %>
   </div>
 
   <div class="form-group">
-    <%= f.label :deadline, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <%= f.label :deadline, :class => 'control-label col-lg-3' %>
+    <div class="col-lg-6">
       <%= f.text_field :deadline, :class => 'form-control' %>
     </div>
     <%=f.error_span(:deadline) %>
   </div>
 
   <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
+    <div class="col-lg-offset-8 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                todo_lists_path, :class => 'btn btn-default' %>
     </div>
   </div>
 
