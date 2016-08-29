@@ -11,9 +11,9 @@ Rails 5.0.0.1
 Mac OS X 10.10.9
 
 ##画面のキャプチャ
- ![image](https://github.com/Youfar/simplyTODO/screenshots/todo_screenshot1.png)
- ![image](https://github.com/Youfar/simplyTODO/screenshots/todo_screenshot2.png)
- ![image](https://github.com/Youfar/simplyTODO/screenshots/todo_screenshot2.png)
+ ![image](https://github.com/Youfar/simplyTODO/screenshots/todo_screenshot1.jpg)
+ ![image](https://github.com/Youfar/simplyTODO/screenshots/todo_screenshot2.jpg)
+ ![image](https://github.com/Youfar/simplyTODO/screenshots/todo_screenshot2.jpg)
 
 ##起動方法
 
