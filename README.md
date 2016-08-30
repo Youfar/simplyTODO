@@ -72,8 +72,12 @@ gem 'twitter-bootstrap-rails'
 ##参考文献、URL
 
 [bootstrap on w3schools](http://www.w3schools.com/bootstrap/default.asp)
+
 [bootstrap css](http://getbootstrap.com/css/#type-headings)
+
 [RailsにTwitter Bootstrapの導入と簡易な使い方](http://ruby-rails.hatenadiary.com/entry/20140801/1406818800)
+
 [Railsドキュメント](http://railsdoc.com)
+
 [Ruby on Rails ガイド](http://railsguides.jp)
 
