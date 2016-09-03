@@ -19,7 +19,7 @@
   <div class="form-group">
     <%= f.label :deadline, :class => 'control-label col-lg-3' %>
     <div class="col-lg-6">
-      <%= f.text_field :deadline, :class => 'form-control' %>
+      <%= f.time_select :deadline, :class => 'form-control' %>
     </div>
     <%=f.error_span(:deadline) %>
   </div>

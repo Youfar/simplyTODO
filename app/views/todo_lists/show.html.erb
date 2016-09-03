@@ -3,33 +3,9 @@
 <h1 class="page-header">
   <p class="text-center"><%= @todo_list.title %></p>
 </h1>
+<%= render 'todo_items/header' %>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:content) %></th>
-      <th><%= model_class.human_attribute_name(:difficulty) %></th>
-      <th><%= model_class.human_attribute_name(:deadline) %></th>
-      <th><%=t '.actions', :default => t("helpers.status") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @todo_list.todo_items.each do |todo_item| %>
-      <tr>
-        <td><%= todo_item.content %></td>
-        <td><%= todo_item.difficulty %></td>
-        <td><%= todo_item.deadline %></td>
-        <td>
-          <%= link_to t('.destroy', :default => t("helpers.links.complete")),
-                      [todo_item.todo_list, todo_item],
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render "todo_items/todo_item" %>
 
 <%= render "todo_items/form" %>
 

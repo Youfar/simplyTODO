@@ -1,0 +1,5 @@
+<%- model_class = TodoList -%>
+
+<% @todo_list.todo_items.each do |todo_item| %>
+	<h2><%= todo_item.content %>さんのページ</h2>
+<% end %>
