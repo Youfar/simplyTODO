@@ -1,5 +1,10 @@
 <%- model_class = TodoList -%>
-
+<% temp = Tod::TimeOfDay(Time.now) %>
 <% @todo_list.todo_items.each do |todo_item| %>
-	<h2><%= todo_item.content %>さんのページ</h2>
+
+  <% if Tod::TimeOfDay(todo_item.deadline) > Tod::TimeOfDay(Time.now) %>
+    <% if !todo_item.completed? %>
+	  <h2>It is time to <%= todo_item.content %></h2>
+	<% end %>
+  <% end %>
 <% end %>

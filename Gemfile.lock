@@ -148,6 +148,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
+    tod (2.1.0)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
@@ -187,6 +188,7 @@ DEPENDENCIES
   sprockets
   sqlite3
   therubyracer
+  tod
   turbolinks (~> 5)
   twitter-bootstrap-rails
   tzinfo-data

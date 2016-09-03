@@ -76,4 +76,6 @@ gem 'twitter-bootstrap-rails'
 [RailsにTwitter Bootstrapの導入と簡易な使い方](http://ruby-rails.hatenadiary.com/entry/20140801/1406818800)
 [Railsドキュメント](http://railsdoc.com)
 [Ruby on Rails ガイド](http://railsguides.jp)
+[Tod](https://github.com/jackc/tod)
+[rubyで時刻だけのオブジェクトを扱いたい](http://qiita.com/hirokishirai/items/93ca9b566dddc815063c)
 

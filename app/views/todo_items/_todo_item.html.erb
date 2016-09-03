@@ -3,48 +3,48 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th><%=t '.actions', :default => t("helpers.complete") %></th>
       <th><%= model_class.human_attribute_name(:content) %></th>
       <th><%= model_class.human_attribute_name(:difficulty) %></th>
       <th><%= model_class.human_attribute_name(:deadline) %></th>
-      <th><%=t '.actions', :default => t("helpers.status") %></th>
+      <th><%=t '.actions', :default => t("helpers.delete") %></th>
     </tr>
   </thead> 
   <tbody>
   	<% @todo_list.todo_items.each do |todo_item| %>
       <tr>
         <% if todo_item.completed? %>
-          <td><p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p></td>
-          <td><%= todo_item.difficulty %></td>
-          <td><%= todo_item.deadline %></td>
-          <td>
-            <%= link_to t('.destroy', :default => t("helpers.links.delete")),
-                      [todo_item.todo_list, todo_item],
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
+          <td class="success">
+            <%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item), method: :patch do %>
+              <i style="opacity: 0.4;" class="fa fa-check"></i>
+            <% end %>
           </td>
-          <td>
-            <%= link_to t('.Mark as Complete', :default => t("helpers.links.complete")),
-                      complete_todo_list_todo_item_path(@todo_list, todo_item),
-                      :method => :patch,
-                      :class => 'btn btn-xs btn-danger' %>
+          <td class="success"><p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p></td>
+          <td class="success"><%= todo_item.difficulty %></td>
+          <td class="success"><%= Tod::TimeOfDay(todo_item.deadline) %></td>
+          <td class="success">
+            <%= link_to [todo_item.todo_list, todo_item],
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
           </td>
         <% else %>
+          <td>
+            <%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item), method: :patch do %>
+              <i class="fa fa-check"></i>
+            <% end %>
+          </td>
           <td><%= todo_item.content %></td>
           <td><%= todo_item.difficulty %></td>
-          <td><%= todo_item.deadline %></td>
+          <td><%= Tod::TimeOfDay(todo_item.deadline) %></td>
           <td>
-            <%= link_to t('.destroy', :default => t("helpers.links.delete")),
-                      [todo_item.todo_list, todo_item],
+            <%= link_to [todo_item.todo_list, todo_item],
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
           </td>
-          <td>
-            <%= link_to t('.Mark as Complete', :default => t("helpers.links.complete")),
-                      complete_todo_list_todo_item_path(@todo_list, todo_item),
-                      :method => :patch,
-                      :class => 'btn btn-xs btn-danger' %>
           <% end %>
       </tr>
     <% end %>

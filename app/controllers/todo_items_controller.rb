@@ -32,5 +32,35 @@ class TodoItemsController < ApplicationController
     def todo_item_params
       params.require(:todo_item).permit(:content, :difficulty, :deadline)
     end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+
+    def sort_column
+      @todo_list = TodoList.find(params[:todo_list_id])
+      @todo_item = @todo_list.todo_items.find(params[:id])
+      @todo_item.column_deadlines.include?(params[:sort]) ? params[:sort] : "deadline"
+    end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
