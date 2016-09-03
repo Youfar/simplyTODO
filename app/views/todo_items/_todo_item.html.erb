@@ -12,16 +12,40 @@
   <tbody>
   	<% @todo_list.todo_items.each do |todo_item| %>
       <tr>
-        <td><%= todo_item.content %></td>
-        <td><%= todo_item.difficulty %></td>
-        <td><%= todo_item.deadline %></td>
-        <td>
-          <%= link_to t('.destroy', :default => t("helpers.links.complete")),
+        <% if todo_item.completed? %>
+          <td><p style="opacity: 0.4;"><strike><%= todo_item.content %></strike></p></td>
+          <td><%= todo_item.difficulty %></td>
+          <td><%= todo_item.deadline %></td>
+          <td>
+            <%= link_to t('.destroy', :default => t("helpers.links.delete")),
                       [todo_item.todo_list, todo_item],
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-xs btn-danger' %>
-        </td>
+          </td>
+          <td>
+            <%= link_to t('.Mark as Complete', :default => t("helpers.links.complete")),
+                      complete_todo_list_todo_item_path(@todo_list, todo_item),
+                      :method => :patch,
+                      :class => 'btn btn-xs btn-danger' %>
+          </td>
+        <% else %>
+          <td><%= todo_item.content %></td>
+          <td><%= todo_item.difficulty %></td>
+          <td><%= todo_item.deadline %></td>
+          <td>
+            <%= link_to t('.destroy', :default => t("helpers.links.delete")),
+                      [todo_item.todo_list, todo_item],
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+          </td>
+          <td>
+            <%= link_to t('.Mark as Complete', :default => t("helpers.links.complete")),
+                      complete_todo_list_todo_item_path(@todo_list, todo_item),
+                      :method => :patch,
+                      :class => 'btn btn-xs btn-danger' %>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
