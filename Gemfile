@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sprockets'
 
 gem 'tod'
+
+gem 'jquery-turbolinks'

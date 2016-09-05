@@ -1,0 +1,13 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+ 
+  <% @weekly_todo_list.each do |weekly_todo_list| %>
+    <tr>
+      <td><%= weekly_todo_list.title %></td>
+    </tr>
+  <% end %>
+</table>

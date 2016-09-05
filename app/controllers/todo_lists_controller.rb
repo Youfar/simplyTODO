@@ -2,17 +2,6 @@
 class TodoListsController < ApplicationController
 
   def index
-    lunch_time = '21:40'
-    t = lunch_time
-    temp = Time.now.strftime("%H:%M")
-
-    if t > temp then
-      temp = t
-    else
-      temp = '16:00'
-    end
-
-    flash[:notice] = "ようこそ。本日は#{Date.today}です。現在は#{temp}です。"
   	@todo_lists = TodoList.all
   end
 

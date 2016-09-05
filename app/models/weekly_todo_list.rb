@@ -1,0 +1,2 @@
+class WeeklyTodoList < ApplicationRecord
+end

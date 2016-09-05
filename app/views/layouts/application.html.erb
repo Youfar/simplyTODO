@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="sampleApp">
 <html>
   <head>
     <title>Tododemo2</title>
@@ -12,7 +13,7 @@
   <body>
   	<% flash.each do |key, value| %>
   		<%= content_tag(:div, value, class: "#{key}") %>
-	<% end %>
+	  <% end %>
     <%= yield %>
   </body>
 </html>
