@@ -59,11 +59,12 @@ gem 'twitter-bootstrap-rails'
 ##課題や展望
 ###課題
 1. Web開発の知識不足を感じました。使いやすいアプリを開発するために、html, css, javascriptの勉強もとても大事です。w3schoolの資料を使って、勉強を始めます。
-2. 大規模なruby on railsシステムになるまで、まだいろんなことが足りないです
+2. 大規模なruby on railsシステムになるまで、まだいろんなことが足りないです。（業務ロジーク、利用人数、内容の大きさ、サーバーの安定性などなど）
 
 ###展望
-1. これからGTDの理念と組み合わせて、自分に役に立つ時間管理ツールを目指します。
-2. RSpecでテストコードを追加します。
+1. RubyとRailsの中身をもっと深く理解します。
+2. これからGTDの理念と組み合わせて、自分に役に立つ時間管理ツールを目指します。
+3. RSpecでテストコードを追加します。
 
 ##自己評価、感想
 1. Web開発の面白さを感じました。これから、このアプリを始め、Webアプリをどんどん開発します。
@@ -72,9 +73,13 @@ gem 'twitter-bootstrap-rails'
 ##参考文献、URL
 
 [bootstrap on w3schools](http://www.w3schools.com/bootstrap/default.asp)
+
 [bootstrap css](http://getbootstrap.com/css/#type-headings)
+
 [RailsにTwitter Bootstrapの導入と簡易な使い方](http://ruby-rails.hatenadiary.com/entry/20140801/1406818800)
+
 [Railsドキュメント](http://railsdoc.com)
+
 [Ruby on Rails ガイド](http://railsguides.jp)
 [Tod](https://github.com/jackc/tod)
 [rubyで時刻だけのオブジェクトを扱いたい](http://qiita.com/hirokishirai/items/93ca9b566dddc815063c)
